@@ -1,0 +1,40 @@
+
+.result{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: black;
+}
+
+.menus{
+    width: 100%;
+    margin: auto;
+}
+.menus li{
+    float: left;
+}
+
+.menus li p{
+    width: 80%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.menus li{
+    background-color: white;
+    width: 25%;
+    height: 300px;
+    text-align: left;
+    display: inline-block;
+}
+
+.menus img{
+    width: 70%;
+    text-align: left;
+}

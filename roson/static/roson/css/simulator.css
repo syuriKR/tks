@@ -1,0 +1,61 @@
+input[type=checkbox]{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.menus li{
+    background-color: white;
+    width: 25%;
+    height: 300px;
+    text-align: left;
+    display: inline-block;
+}
+
+.menus img{
+    width: 70%;
+    text-align: left;
+}
+
+.menus input[type=checkbox]:checked + label > li{
+    background-color:rgba(0,170,255,0.4);
+}
+
+.menus{
+    width: 100%;
+    margin: auto;
+}
+.menus li{
+    float: left;
+}
+
+.menus li p{
+    width: 80%;
+}
+
+
+.categories{
+    text-align: center;
+}   
+.categories ul{
+    list-style: none;
+}
+.categories li{
+    display: inline;
+    color: blue;
+}
+
+.button {
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+li:hover{
+    cursor: pointer;
+}

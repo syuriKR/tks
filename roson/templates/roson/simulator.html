@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'roson/css/simulator.css' %}" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'roson/js/script.js' %}"></script>
+    <title>シミュレーター</title>
+</head>
+<body>
+    <h3><a href='/roson'>ホーム</a></h3>
+    <h1 style="text-align: center; font-size: x-large">シミュレーター</h1>
+    <br>
+    <p style="text-align: center">商品を選択すると値段とカロリーの合計が出ます</p>
+    <div class="categories">
+        <ul>
+            <input type="checkbox" id="all" onclick="display_all()">
+            <label for="all">
+                <li>全て</li>
+            </label>
+            <br>
+            {% for j,e in categories.items %}
+                <input type="checkbox" id={{e}} onclick="change_categorie(this.id)">
+                <label for={{e}}>
+                    <li style="display: inline-block;">
+                        {{j}}
+                    </li>
+                </label>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr>
+    <div class=menus>
+        <form name = "myform" id="selected_menus" action="sim_result" method="post">
+            {% csrf_token %}
+            <input type="submit" value="計算する" class="button">
+            <input type="reset" value="クリア">
+            <hr>
+            {% for name, lst in categorie_name.items %}
+                <div class={{name}}>
+                    <ul>
+                        {% for item in lst %}
+                            <input type="checkbox" name="checks" value={{item.nameid}} id={{item.nameid}}>
+                            <label for={{item.nameid}}>
+                                    <li>
+                                        <img src={{item.picture}} style="margin-bottom: 0;">
+                                            <p style="margin-top: 0;">{{item.name}}</p>
+                                            <p style="margin-bottom: 0;">{{item.price}}円</p>
+                                            <p style="margin-top: 0;">{{item.calorie}}kcal</p>
+                                    </li>
+                            </label>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+
+</body>
+</html>

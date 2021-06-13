@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<title>ラインナップ</title>
+<meta charset = "utf-8">
+
+<!-- <link href = "styles/style.css" rel = "stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'roson/css/style_menu.css' %}"/>
+
+<div class = page>
+    <div calss = "heading">
+        <h3><a href='/roson'>ホーム</a></h3>
+    </div>
+    <h1 style="text-align: center; font-size: x-large">ラインナップ</h1>
+    <p style="text-align: center">ジャンル別検索、値段・カロリーによるソートができます(´・ω・`)</p>
+    <form action="{% url 'menu' %}" method="post" style="text-align: center;">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="決定">
+    </form>
+
+    <br>
+
+    {% for item in data %}
+    <div class = "menu">
+    <ul>
+        <li>
+        <a href = "{{item.link}}" target ="_blank"><img src = {{item.picture}} class = "picture"></a>
+        <p><a href = "{{item.link}}" target ="_blank">{{item.name}}</a></p><p>{{item.price}}円 {{item.calorie}}kcal</p>
+        </li>
+    </ul>
+    </div>
+    {% endfor %}
+</div>
+</html>

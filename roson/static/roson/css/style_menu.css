@@ -1,0 +1,32 @@
+img{
+    width:100%;
+    height: auto;
+}
+
+/*　元の奴 
+.menu{
+    display:inline-block;
+    width: 24%;
+    height: auto;
+    text-align: center;
+} */
+
+.menu li{
+    display: inline-block;
+    width: 25%;
+    height: 400px;
+    text-align:center;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu img{
+    width:75%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>ローソンガチャ</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'roson/css/style.css' %}"/>
+    </head>
+
+    <body background="{% static 'roson/picture/roson.png' %}">
+    <div id="outerGroup">
+            <h1>ローソンガチャ</h1>
+            <p style="color: white">powered by 2班</p>
+            <p class="setsumei">みなさんはローソンでどのように買い物していますか？ローソンは良い商品が多くて食べ物を選ぶのが大変ですよね。そんな時はコレ！このサイトでは、予算やカロリーを入力するだけでお勧めの商品をランダムに選んでくれます。このサイトを使ってローソンライフを楽しみましょう！</p>
+            <div class="btn-wrap--perspective">
+  　　　　      <div class="mgr-20"><a href=menu href="" class="btn btn-3d btn-3db">ラインナップ<i class="fas fa-angle-down fa-position-right"></i></a></div>
+　　　　　    </div>
+            <div class="btn-wrap--perspective">
+               <div class="mgr-20"><a href=simulator href="" class="btn btn-3d btn-3db">シミュレーター<i class="fas fa-angle-down fa-position-right"></i></a></div>
+            </div>
+            <div class="btn-wrap--perspective">
+               <div class="mgr-20"><a href=gacha/price href="" class="btn btn-3d btn-3db">N円ガチャガチャ<i class="fas fa-angle-down fa-position-right"></i></a></div>
+            </div>
+            <div class="btn-wrap--perspective">
+               <div class="mgr-20"><a href=gacha/calorie href="" class="btn btn-3d btn-3db">Nカロリーガチャガチャ<i class="fas fa-angle-down fa-position-right"></i></a></div>
+        </div>
+        <div class="margin">
+        </diV>
+        <h2 id="reference">参考</h2>
+
+            <table>
+            <tr><th></th><th>男性</th><th>女性</th></tr>
+            <tr><td>1日に必要な熱量(kcal)</td><td>2650</td><td>2000</td></tr>
+            <tr><td>タンパク質(g)</td><td>65</td><td>50</td></tr>
+            <tr><td>脂質(%)</td><td>20~30</td><td>20~30</td></tr>
+            <tr><td>炭水化物(%)</td><td>50~65</td><td>50~65</td></tr>
+            </table>
+
+            <hr />
+            <h2>班員</h2>
+            <p>このサービスの開発者を紹介するよ</p>
+            <ul>
+                <li class="human">内村公亮</li>
+                <li class="human">木下一歩</li>
+                <li class="human">榊原智仁</li>
+                <li class="human">山崎悠人</li>
+            </ul>
+
+    </div>
+    </body>
+</html>
